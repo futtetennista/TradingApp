@@ -1,0 +1,15 @@
+{
+  "securityId": "sb26500",
+  "symbol": "GOLD",
+  "displayName": "Gold",
+  "currentPrice": {
+    "currency": "USD",
+    "decimals": 1,
+      "amount": "1587.4"
+  },
+  "closingPrice": {
+    "currency": "USD",
+    "decimals": 1,
+    "amount": "1342.1"
+  }
+}

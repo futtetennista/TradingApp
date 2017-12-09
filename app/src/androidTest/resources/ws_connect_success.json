@@ -1,0 +1,6 @@
+{
+  "t": "connect.connected",
+  "body": {
+    "foo": "bar"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "securityId": "sb26496",
+  "symbol": "US500",
+  "displayName": "US 500",
+  "currentPrice": {
+    "currency": "USD",
+    "decimals": 2,
+    "amount": "2983.32"
+  },
+  "closingPrice": {
+    "currency": "USD",
+    "decimals": 2,
+    "amount": "2500.97"
+  }
+}

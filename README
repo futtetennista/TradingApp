@@ -1,0 +1,48 @@
+# Trading App
+
+## General remarks
+I tried to put a lot of attention on naming things and make the code as easy as possible given
+the time and the intrinsic difficulty of the assignment and its concurrent/async nature. I
+tried to write comments in spots that are particularly troublesome to share my rationale, I hope
+that'll help navigating through the code. The app is build heavily on RxJava and related Android
+bindings heavily and generally I tried to adopt a functional style as much as I could, trying to
+avoid implicit state handling whenever it was feasible and I was able to.
+
+## Architecture
+
+It's heavily inspired by the Elm architecture and Redux. The naming conventions
+are the same and might look weird for people not familiar with it. In a nutshell:
+* Model: a file that defines common types and data structures (class specific ones are in the
+appropriate files/classes
+* View: defines how data is displayed - that is in Android lingo an Activity, a Fragment, a View
+* Update: defines interactions, it's responsible for most of the state handling and app logic
+
+There are three files containing all components related to those concepts, while the Api
+and ProductsChannel files describe the API.
+
+## General remarks
+- UI is minimal since it was not the focus of the assignment and I dedicated ~2% of time coding it
+- Test coverage is far from being exhaustive or honestly acceptable: I had some tests that I
+threw away because half-way through the assignment I noticed the way the app was working…well it
+wasn't really working so I didn't manage to rewrite some of the tests I wrote for the old version.
+So everything related to the products channel and the update logic does not have any automated tests.
+- I left a lot of logs around, they were extremely useful to debug issues and possibly be helpful
+ also for you.
+- Handling sockets with Rx was particularly challenging for me. I'm not 100% convinced the way
+I've done it it's the cleanest, clearest and more elegant, it probably need a couple more
+iterations to become better.
+- Thinking about all possible failures took SO much time, it'd have been nice to have written a
+bit more tests but I hope I did a good job at that. It's a lot the app has on its hands though,
+RESTful calls, websockets and Android lifecycle among other things.
+
+## Improvements
+I don't know if you're familiar with Reactive Extensions and RxJava but I couldn't find elegant
+solutions in a couple of places (marked with TODO#Improve). In case you are familiar with it, I'd
+ appreciate some feedback on that if you've got any.
+
+# Known bugs
+If you're testing the app using an emulator, fetching a new product id won't work because of [this
+ issue](https://github.com/square/okhttp/issues/3278) in okhttp
+
+## Building the app
+I used Gradle and all standard Android tools so you shouldn't have any issues with it.

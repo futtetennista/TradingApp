@@ -1,0 +1,7 @@
+{
+  "t": "trading.quote",
+  "body": {
+    "securityId": "sb26500",
+    "currentPrice": "10692.3"
+  }
+}

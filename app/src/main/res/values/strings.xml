@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Trading App</string>
+    <string name="snackbar_action_retry">Retry</string>
+    <string name="error_connect_failed">Couldn\'t connect to real-time product updates.
+        Please try gain later.</string>
+    <string name="error_general_ws">Real-time product updates currently unavailable</string>
+    <string name="error_try_again">Try again later (HTTP response code: %d)</string>
+    <string name="error_general">Cannot reach the server now. Please try gain later.</string>
+    <string name="error_not_found">Product id \'%s\' does not exist</string>
+    <string name="enter_a_product_id">Enter a product id</string>
+    <string name="offline">No connection: the app is now offline.</string>
+    <string name="retry">Retry</string>
+</resources>
